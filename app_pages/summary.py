@@ -16,9 +16,9 @@ def summary_body():
         f"of future credit issuance are risk free.\n"
         f"\nTwo main economic benefits can be achieved by following\n"
         f"loan issuance decisions aided by data, these are:\n"
-        f"1. Increase the net income by increasing the revenue from\n"
+        f"* 1. Increase the net income by increasing the revenue from\n"
         f"reliable interest continuous payment\n"
-        f"2. Reduce legal proceedings expenses needed to resolve defaulted\n"
+        f"* 2. Reduce legal proceedings expenses needed to resolve\n"
         f"defaulted cases.\n"
     )
 
@@ -31,14 +31,14 @@ def summary_body():
 
     st.success(
         f"The project has three business requirements:\n"
-        f"1. The client is interested to have a data analysis study to\n"
+        f"* 1. The client is interested to have a data analysis study to\n"
         f" understand the general correlations between the variables\n"
         f"in the dataset.\n"
         f"so the client can learn the most relevant variables that can affect\n"
         f"default event.\n"
-        f"2. The client is interested in creating a classification model\n"
+        f"* 2. The client is interested in creating a classification model\n"
         f"that is able to predict loan applicant default event with high\n"
         f"confidence with high precision of at least **85%**.\n"
-        f"3. The client is interested in identifying any hidden patterns\n"
+        f"* 3. The client is interested in identifying any hidden patterns\n"
         f"in the data to derive conclusions that can benefit the business.\n"
     )

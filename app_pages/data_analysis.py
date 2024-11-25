@@ -43,7 +43,7 @@ def data_analysis_body():
 
     # Correlation Study Summary
     st.write(
-        f"* A correlation study was conducted in the notebook to better\n"
+        f"A correlation study was conducted in the notebook to better\n"
         f"understand how the variables are correlated to loan_status levels.\n"
     )
     st.write(
@@ -52,14 +52,17 @@ def data_analysis_body():
 
     # Text based on "02 - Data Analysis" notebook - "Conclusions" section
     st.info(
-        f"From the correlation study the following conclusions are extracted:\n"
-        f"1. Pervious loan default has positive and moderate correlation to loan approval.\n"
-        f"2. Interest Rate has positive and weak correlation to loan approval.\n"
-        f"3. Loan-to-income ratio has positive and weak correlation to loan approval.\n"
-        f"4. Home ownership has weak correlation to loan approval.\n"
+        f"**From the correlation study, the following conclusions are**\n"
+        f"**extracted:**\n\n"
+        f"* 1. Pervious loan default has positive and moderate correlation to loan approval.\n"
+        f"* 2. Interest Rate has positive and weak correlation to loan\n"
+        f"approval.\n"
+        f"* 3. Loan-to-income ratio has positive and weak correlation to loan\n"
+        f"approval.\n"
+        f"* 4. Home ownership has weak correlation to loan approval.\n"
         f"This correlation exercises two duality depending on home ownership\n"
         f"status (i.e. rent, own and mortgage).\n"
-        f"5. Income has negative and very weak correlation to loan approval.\n"
+        f"* 5. Income has negative and very weak correlation to loan approval.\n"
     )
 
     # Code copied from "02 - Data Analysis" notebook
@@ -129,6 +132,5 @@ def parallel_plot_loan_status(df_eda):
     df_parallel['loan_int_rate'] = df_parallel['loan_int_rate'].replace(
         labels_map)
     fig = px.parallel_categories(
-        df_parallel, color="loan_status", color_continuous_scale="bluered")
-    fig.update_layout(paper_bgcolor='black')
+        df_parallel, color="loan_status", width=720, height=500)
     st.plotly_chart(fig)
