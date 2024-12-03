@@ -6,7 +6,7 @@ from src.machine_learning.predictive_analysis_ui import (
     predict_cluster)
 
 
-def live_predict_default_body():
+def default_predictor_body():
 
     # load predict default files
     version = 'v1'

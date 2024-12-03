@@ -5,7 +5,7 @@ import plotly.express as px
 from src.data_management import loan_default_data, load_pkl_file
 
 
-def cluster_body():
+def ml_cluster_body():
 
     # load cluster analysis files and pipeline
     version = 'v1'

@@ -5,7 +5,7 @@ from src.data_management import load_pkl_file
 from src.machine_learning.evaluate_clf import clf_performance
 
 
-def predict_default_body():
+def ml_default_body():
 
     version = 'v1'
     # load needed files
