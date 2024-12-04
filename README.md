@@ -74,18 +74,73 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 ## Deployment
-### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+This section is devoted to explain the procedures conducted by the author to deploy and clone SalesWare code. Additionally, for those who are interested to create a fork from the main branch, a dedicated procedure is also provided.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+### 1 Heroku
+
+The following procedure is implemented to deploy SalesWare on Heroku platform:
+
+1. Sign in to Heroku account on Heroku dashboard, click on "Create a new app" button
+2. Within the "Create New App" window, go to the "App name" input field and type in an App name
+3. Within the same window, choose your region from the "Choose region" dropdown menu
+4. Click on "Create app" button
+5. New window opens for the App that is just created
+6. Now go to the "Deploy" tap right at the top of the window
+7. Within the "Deployment method" row, click on "GitHub" button
+8. Within the "Connect to GitHub" (One row down the Deployment method) click on "Connect to GitHub"
+9. Wait a bit for loading
+10. Now on the same row and within the search field, type the name of the project repository and click on "Search" button
+11. Now click connect
+12. Once it is connected to the project repository, scroll down to "Manual Deploy"
+13. Within this row, click on "Deploy Branch"
+14. Once the deploy log is finished, a message appears and hopefully says: "You app was successfully deployed"
+15. Below it a "View" button appears as well
+16. Click on the "View" to open the deployed project on a new browser tap 
+
+**Note: Throughout the development, the author chooses only the manual deployment.**
+
+### 2. GitHub
+
+The following procedure is followed to create the software repository
+
+1. Go to your repositories 
+2. Open CI PP5-template
+3. On the top right, click on "Use this template"
+4. Click on "Create a new repository"
+5. New window opens
+6. In the field of "Repository name" type the project name
+7. Choose public
+8. Then click on "Create repository"
+
+### 3. Clone into Gitpod
+
+The following procedure is implemented to clone from the GiTHub repo into Gitpod:
+
+1. Go to the "code" in the upper right corner
+2. Select "local" 
+3. Select "Clone/HTTPs"
+4. Copy the url provided
+5. Open new browser tap
+6. Open your Gitpod Workspace
+7. Click on "Create new workspace"
+8. Click on "select new Repository"
+9. Paste the url in input window
+10. Click continue
+
+### 4. Fork
+
+For any person interested to work on the source code of this project, here is the procedure that needs to be followed to make a fork.
+
+1. Go to ahmedcodein repositories
+2. Click on "loan_default" repo
+3. In the upper right corner, click of "fork" drop down menu
+4. Click on "create new fork"
+5. Create new fork window opens
+6. Select the "owner" of the repo
+7. Add a name to "Repository name"
+8. Add a description to the "Description" field if needed
+9. Click on "Create fork"
 
 
 ## Main Data Analysis and Machine Learning Libraries
