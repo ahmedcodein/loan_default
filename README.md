@@ -92,24 +92,18 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 * Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
 
 
-## Credits 
+## References 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* [Loan Classification Dataset](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data) is used as the dataset to develop the project.
+* [Code Institute study material](https://codeinstitute.net/de/bildungsgutschein/?hsa_acc=8983321581&hsa_cam=16493764737&hsa_grp=1148990625418091&hsa_ad=&hsa_src=o&hsa_tgt=kwd-71812600511432:loc-72&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&msclkid=6245198f3a9b11aeff5f7edfff546ccc&utm_source=bing&utm_medium=cpc&utm_campaign=CI%20-%20DE%20-%20Search%20-%20Brand&utm_term=code%20institute&utm_content=CI%20-%20DE%20-%20Search%20-%20Brand%20-%20Exact).
+* Code Institute Walkthrough Projects. The entirety of the code in this project is taken from Code Institute **Churnometer** walkthrough project.
+* [scikit-learn documentation](https://scikit-learn.org/dev/index.html).
+* [ChatGPT](https://chat.openai.com/auth/login?sso) is used to understand various ML concepts.
+* [Google Gemini](https://gemini.google.com/) is used to understand various ML concepts.
+* Code Intitute PP5 student project [Airplane Performance Predictor
+](https://github.com/GustafEnebog/data-driven-design)
 
-### Content 
+## Acknowledgements
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people that provided support through this project.
+I would like to thank Mr. Mo Shami for his inputs during the project development. I would also like to thank my family for their help and support during the entire time of this course.
 
