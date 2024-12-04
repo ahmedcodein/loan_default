@@ -6,7 +6,7 @@ from app_pages.page_summary import summary_body
 from app_pages.page_data_analysis import data_analysis_body
 from app_pages.page_hypotheses import hypothesis_body
 from app_pages.page_ml_default import ml_default_body
-from app_pages.page_cluster import ml_cluster_body
+from app_pages.page_ml_cluster import ml_cluster_body
 from app_pages.page_default_predictor import default_predictor_body
 
 # Create an instance of the app

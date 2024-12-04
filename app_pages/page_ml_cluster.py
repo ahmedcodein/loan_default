@@ -33,26 +33,31 @@ def ml_cluster_body():
         f"* The custer pipeline is fitted with best features\n"
         f"resulted it in a significant improvement in terms of performance\n"
         f"with respect to full features case.\n"
-        f"* The pipeline average silhouette score is 0.39."
+        f"* The pipeline average silhouette score is 0.29."
     )
     st.write("---")
 
-    st.write("#### Cluster ML Pipeline steps")
+    st.write("#### 1. Cluster ML Pipeline steps")
+    st.write("")
     st.write(cluster_pipe)
 
-    st.write("#### The features the model was trained with")
+    st.write("#### 2. The features the model was trained with")
+    st.write("")
     st.write(cluster_features)
 
-    st.write("#### Clusters Silhouette Plot")
+    st.write("#### 3. Clusters Silhouette Plot")
+    st.write("")
     st.image(cluster_silhouette)
 
     cluster_distribution_per_variable(
         df=df_loan_status_vs_clusters, target='loan_status')
 
-    st.write("#### Most important features to define a cluster")
+    st.write("#### 6. Most important features to define a cluster")
+    st.write("")
     st.image(features_to_cluster)
 
-    st.write("#### Cluster Profile")
+    st.write("#### 7. Cluster Profile")
+    st.write("")
     statement = (
         f"* Clusters 1 and 2 interpretation shows that default on\n"
         f"previous loan(s) is **100%** risk of default predictor.\n"
@@ -101,12 +106,11 @@ def cluster_distribution_per_variable(df, target):
     df_bar_plot.columns = ['Clusters', target, 'Count']
     df_bar_plot[target] = df_bar_plot[target].astype('object')
 
-    st.write(f"#### Clusters distribution across {target} levels")
+    st.write(f"#### 4. Clusters distribution across {target} levels")
     fig = px.bar(df_bar_plot, x='Clusters', y='Count',
                  color=target, width=800, height=350)
     fig.update_layout(xaxis=dict(tickmode='array',
                       tickvals=df['Clusters'].unique()))
-    # we replaced fig.show() for a streamlit command to render the plot
     st.plotly_chart(fig)
 
     df_relative = (df
@@ -119,11 +123,10 @@ def cluster_distribution_per_variable(df, target):
                    )
     df_relative.columns = ['Clusters', target, 'Relative Percentage (%)']
 
-    st.write(f"#### Relative Percentage (%) of {target} in each cluster")
+    st.write(f"#### 5. Relative Percentage (%) of {target} in each cluster")
     fig = px.line(df_relative, x='Clusters', y='Relative Percentage (%)',
                   color=target, width=800, height=350)
     fig.update_layout(xaxis=dict(tickmode='array',
                       tickvals=df['Clusters'].unique()))
     fig.update_traces(mode='markers+lines')
-    # we replaced fig.show() for a streamlit command to render the plot
     st.plotly_chart(fig)
