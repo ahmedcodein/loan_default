@@ -6,27 +6,43 @@ def hypothesis_body():
     st.write("### Project Hypothesis and Validation")
 
     st.write("#### 1. Discussions")
+    st.write("")
 
     st.info(
         f"Upon embarking on this project, **four hypotheses are considered**\n"
-        f". The first three hypotheses are validated by conducting a cluster\n"
-        f"analysis, please refer to **Notebook 05-a, conclusion section**.\n\n"
-        f"**The fourth hypotheses**, however, could not be validated except\n"
-        f"by analyzing the parallel plot of **Data Analysis Notebook 02**.\n"
-        f"It should be noted that such validation is subjective.Therefore,\n"
-        f"further investigation is necessary to validate the truthy\n"
-        f"of the fourth hypothesis.\n"
+        f". The first and the fourth hypotheses are validated,\n"
+        f"while the second and the third hypotheses proved to be invalid\n"
+        f"The author suspects that the second and the third hypotheses are not\n"
+        f"validated due to some missing variables in the original dataset\n"
+        f"that are essential for training the model, for example, the length\n"
+        f"of the loan, other incomes or other outstanding loans.\n"
     )
 
     st.write("#### 2. Hypotheses")
+    st.write("")
 
     st.success(
-        f"* 1. Default on previous loan(s) makes it unlikely to acquire new \n"
-        f"loan.\n"
-        f"* 2. The higher the loan_percent_income, the higher the\n"
-        f"probability of rejecting the loan\n"
-        f"* 3. However high a person's income, it does not impact loan\n"
-        f"approval if the loan_to_income ratio is below a defined threshold.\n"
-        f"* 4. If debtor has rented home and has no record of default,\n"
-        f"the likelihood of approving loan is guaranteed.\n"
+        f"1. **Default on previous loan(s) makes it unlikely to acquire new \n"
+        f"loan**.\n"
+        f"The hypothesis is validated in both the parallel plot and in\n"
+        f"cluster analysis conducted in notebook 02 and 05-b respectively.\n"
+        f"2. **The higher the loan-to-income ratio, the higher the\n"
+        f"probability of rejecting the loan**.\n"
+        f"In notebook 05-b, Cluster Analysis, cluster profiles reveal\n"
+        f"that the opposite is true. That is the higher loan-to-income ratio\n"
+        f"the lower the risk of default.\n"
+        f"From the author perspective, this is attributed to the lack of\n"
+        f"data variables in the dataset that could explain this\n"
+        f"counterintuitive result, such as Loan Length.\n"
+        f"3. **However high a person's income, it does not impact loan\n"
+        f"approval if the loan-to-income ratio is below a defined\n"
+        f"threshold**.\n"
+        f"This hypothesis appears to be invalid, for the same reason in the\n"
+        f"presented in hypothesis **2**.\n"
+        f"4. **If a debtor rents their home and has no record of default,\n"
+        f"the likelihood of no defaulting on loan is guaranteed.**\n"
+        f"The parallel plot analysis in notebook 02 reveals that the initial\n"
+        f"hypothesis is **not entirely accurate**. While renters tend to have\n"
+        f"a lower default rate compared to debtors with other home\n"
+        f"ownership types, it does not guarantee a risk-free loan."
     )
