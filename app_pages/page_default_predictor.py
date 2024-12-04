@@ -34,9 +34,10 @@ def default_predictor_body():
     st.info(
         f"* The client is interested in determining whether or not a given\n"
         f"debt applicant will default.\n"
-        f"If so, the client is interested to know what is the probability\n"
-        f"of the outcome. In addition, the client is interested in learning\n"
-        f"from which cluster this debt applicant does belong"
+        f"Additionally, the client is interested to know what is\n"
+        f" the probability of the outcome. Moreover, the client is\n"
+        f"interested in learning from which cluster this debt applicant\n"
+        f"does belong to.\n"
     )
     st.write("---")
 
