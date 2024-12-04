@@ -6,10 +6,11 @@ def summary_body():
     st.write("### Project Summary")
 
     st.write("#### 1. Introduction")
+    st.write("")
     st.info(
         f"**Loan Default Predictor** **(LDP)** aims to assess institutional\n"
-        f"lenders (creditors) represented by a credit analyst to evaluate the debt\n"
-        f"applicant default risk.\n"
+        f"lenders (creditors) represented by a credit analyst to evaluate the\n"
+        f"debt applicant default risk.\n"
         f"**LDP** achieves this by exploiting historical Data and machine\n"
         f"learning algorithms to predict potential default cases.\n"
         f"As such, the institutional lender will be able to ensure **85%**\n"
@@ -29,6 +30,7 @@ def summary_body():
     )
 
     st.write("#### 2. Business Requirements")
+    st.write("")
 
     st.success(
         f"The project has three business requirements:\n"

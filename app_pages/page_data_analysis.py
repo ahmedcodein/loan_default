@@ -25,10 +25,13 @@ def data_analysis_body():
     st.write("### Data Analysis")
     st.info(
         f"The client is interested to have a data analysis study to\n"
-        f"understand the general correlations between the variables\n"
-        f"in the dataset.\n"
+        f" understand the general correlations between the variables\n"
+        f"in the dataset, so the client can learn the most relevant\n"
+        f"variables that can affect\n"
+        f"default event.\n"
     )
-    st.write("#### *Data Inspection*")
+    st.write("#### 1. Data Inspection")
+    st.write("")
     # inspect data
     if st.checkbox("Inspect Loan Default Dataset"):
         st.write(
@@ -38,13 +41,15 @@ def data_analysis_body():
         st.write(df.head(10))
 
     st.write("---")
-    
-    st.write("#### *Correlation Study*")
+
+    st.write("#### 2. Correlation Study")
+    st.write("")
 
     # Correlation Study Summary
-    st.write(
-        f"A correlation study was conducted in the notebook to better\n"
-        f"understand how the variables are correlated to loan_status levels.\n"
+    st.success(
+        f"A correlation study was conducted in the data analysis notebook\n"
+        f"to better understand how the variables are correlated to\n"
+        f"loan_status levels.\n"
     )
     st.write(
         f"* The most correlated variable are: **{vars_to_study}**"
@@ -95,7 +100,8 @@ def loan_status_level_per_variable(df_eda):
 # "Implementation of EDA on selected variables" section
 def plot_categorical(df, col, target_var):
     fig, axes = plt.subplots(figsize=(12, 5))
-    sns.countplot(data=df, x=col, hue=target_var, order=df[col].value_counts().index)
+    sns.countplot(data=df, x=col, hue=target_var,
+                  order=df[col].value_counts().index)
     plt.xticks(rotation=90)
     plt.title(f"{col}", fontsize=20, y=1.05)
     st.pyplot(fig)  # st.pyplot() renders image, in notebook is plt.show()
