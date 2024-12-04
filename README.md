@@ -18,9 +18,16 @@ The project has three business requirements:
 3. The client is interested in identifying typical applicant profiles and how those profiles relate to a default event.
 
 
-# Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+# Project Hypotheses
 
+Upon embarking on this project, four hypotheses are considered . The first and the fourth hypotheses are validated, while the second and the third hypotheses proved to be invalid The author suspects that the second and the third hypotheses are not validated due to some missing variables in the original dataset that are essential for training the model, for example, the length of the loan, other incomes or other outstanding loans.
+
+The four hypotheses are listed here with their respective validation discussions:
+
+1. Default on previous loan(s) makes it unlikely to acquire new loan. The hypothesis is validated in both the parallel plot and in cluster analysis conducted in notebook 02 and 05-b respectively.
+2. The higher the loan-to-income ratio, the higher the probability of rejecting the loan. In notebook 05-b, Cluster Analysis, cluster profiles reveal that the opposite is true. That is the higher loan-to-income ratio the lower the risk of default. From the author perspective, this is attributed to the lack of data variables in the dataset that could explain this counterintuitive result, such as Loan Length.
+3. However high a person's income, it does not impact loan approval if the loan-to-income ratio is below a defined threshold. This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2.
+4. If a debtor rents their home and has no record of default, the likelihood of no defaulting on loan is guaranteed. The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan.
 
 # The rationale to map the business requirements to the Data Visualizations and ML tasks
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
