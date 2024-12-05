@@ -9,6 +9,30 @@ Two main economic benefits can be achieved by following loan issuance decisions 
 
 The live link to the project is provided in [Loan Default Predictor](https://loan-default-ml-predictor-a4d2d7adf5ae.herokuapp.com/)
 
+# Dataset
+
+The dataset is imported from [kaggle](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data). The dataset contains 14 attributes. Each attribute describes a specific trait of a pervious debtor. In the dataset, these attributes are represented by columns. While each row, describes one a debtor, who either defaulted or not.
+
+The dataset consists of 14 attributes (variables). From these, 9 and Numeric and 5 are Text (Categorical - Object). The dataset contains 45000 records. A summary of the dataset is provided in the table below:
+
+| Variable                       | Description                                                | Data Type   |
+| ------------------------------ | ---------------------------------------------------------- | ----------- |
+| person_age                     | Age of the person                                          | Float       |
+| person_gender                  | Gender of the person                                       | Categorical |
+| person_education               | Highest education level                                    | Categorical |
+| person_income                  | Annual income                                              | Float       |
+| person_emp_exp                 | Years of employment experience                             | Integer     |
+| person_home_ownership          | Home ownership status (e.g., rent, own, mortgage)          | Categorical |
+| loan_amnt                      | Loan amount requested                                      | Float       |
+| loan_intent                    | Purpose of the loan                                        | Categorical |
+| loan_int_rate                  | Loan interest rate                                         | Float       |
+| loan_percent_income            | Loan amount as a percentage of annual income               | Float       |
+| cb_person_cred_hist_length     | Length of credit history in years                          | Float       |
+| credit_score                   | Credit score of the person                                 | Integer     |
+| previous_loan_defaults_on_file | Indicator of previous loan defaults                        | Categorical |
+| loan_status (target variable)  | Loan approval status: **Default = 0**, **No Default == 1** | Integer     |
+
+
 # Business Requirements
 
 The project has three business requirements:
