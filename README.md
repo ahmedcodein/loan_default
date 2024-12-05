@@ -217,8 +217,38 @@ For any person interested to work on the source code of this project, here is th
 9. Click on "Create fork"
 
 
+# Technologies Used
+
+In this section a list of the technologies used to develop this project is provided below:
+
+| Technology       | Description                                                                                                        |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Python           | Programming Language                                                                                               |
+| GitHub           | Development Platform                                                                                               |
+| Gitpod           | Cloud Development Environment                                                                                      |
+| streamlit        | Open-source framework for foe data scientists and AI/ML engineers enables them to deliver interactive applications |
+| Heroku           | Development Platform                                                                                               |
+| CI Python Linter | Code Institute Python code style convention checker                                                                |
+
 # Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+
+In this section a list the libraries used to develop the project with a description as to what purpose each package is used for.
+
+| Technology          | Description                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| os                  | Python module to interacting with the operating system                                                                               |
+| pandas              | Python library for data analysis and manipulation                                                                                    |
+| numpy               | Python library for large and multi-dimensional arrays and matrices computation                                                       |
+| ydata_profiling     | Python library for generating reports on dataset for exploratory data analysis and data quality assessment Platform                  |
+| ppscore             | Python package is used as a metric to ass the predictive power of one variable on another                                            |
+| feature_engine      | Python library for feature engineering, providing a variety of transformers to handel missing values, encoding, etc.                 |
+| matplotlib.pyplot   | Python library for static and interactive visualizations                                                                             |
+| scikit-learn        | Python library for machine learning                                                                                                  |
+| xgboost             | Open Source for regularizing gradient boosting framework                                                                             |
+| SciPy               | Python library for scientific computing and engineering tasks                                                                        |
+| joblib              | Python library used to simplify and optimize tasks related ot data processing and machine learning pipelines                         |
+| yellowbrick.cluster | Part of yellowbrick library for visualizing and evaluating clustering algorithms and assess the performance of the clustering models |
+| warnings            | Python warning control                                                                                                               |
 
 
 # References 
