@@ -139,10 +139,38 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
     - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
 
 # Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 
-
+## 1. Project Summary
+The following aspects are to be viewed in the project summary page:
+  - Introduction: A summary of the project intend and main goal with a description of main business benefit expected from the project
+  - Business Requirements: a list of the business requirements
+## 2. Data Analysis
+The following aspects are to be viewed in the data analysis page:
+  - Page Aim: A description of the main intend of this page.
+  - Dataset Listing: Providing an access to the dataset to allow the user to view the dataset.
+  - Correlation Study: Enable the user to view the correlated variables and summary of how those correlated to target variable. It also shows the target variable level to each of extracted variables. Finally, the ability to view the parallel plot. 
+## 3. Hypotheses
+The following aspects are to be viewed in the Hypotheses page:
+  - Discussion: a brief discussion on the main findings following the hypotheses validation.
+  - Hypotheses: listing the hypotheses with an explanation how each of the hypotheses is evaluated
+## 4. ML: Predict Default
+The following aspects are to be viewed in the ML Predict Default Pipeline page:
+  - Introduction: a brief discussion on the main goal of the ML pipeline.
+  - Pipelines: Definitions of the developed pipelines with the ability to display them.
+  - Features: Displaying the features the pipelines are trained on.
+  - Pipeline Performance: Displaying two reports on the ML pipeline performance on the train and test datasets respectively.
+## 5. ML: Cluster Analysis
+The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page:
+  - Introduction: a brief discussion on pipeline main result.
+  - Pipeline: Definitions of the developed pipeline with the ability to display the pipeline steps.
+  - Features: Displaying the features the pipelines are trained on.
+  - Plots: Displaying Silhouette, cluster distribution over the target variable, relative percentage of target variable to each cluster and a plot to display best features to define a cluster
+  - Cluster Profile Summary: displaying a description of each cluster profile with a discussion on each cluster. Additionally, displaying a table that shows cluster profiles.
+## 6. Default Predictor
+The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page:
+  - Introduction: description the main goal of the predictor.
+  - Predictor Interface: Listing the important features as inputs for the user with a button of running the prediction.
+  - Result: Showing the prediction result with description of the results meaning.
 
 # Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
