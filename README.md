@@ -36,6 +36,107 @@ The four hypotheses are listed here with their respective validation discussions
 # ML Business Case
 * In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
+# Agile Development
+
+Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories.
+
+**Epic LDP-1 Data Collection**\
+*Description:* This Epic is concerned with collecting, downloading and saving the dataset.
+
+  - **Dataset Download**
+    - As a data practitioner, I can collect the dataset from Kaggel to the workspace so I can download the dataset and unzip it.
+  - **Data Saving**
+    - As a data practitioner, I can save the collected dataset from Kaggel in a directory in the workspace so I can use the data for the analysis stage.
+  
+**Epic LDP-2 Data Analysis**\
+*Description:* This Epic is concerned with analyzing the dataset.
+
+  - **Data Loading**
+    - As a data practitioner, I can load the dataset from workspace so I can begin the data analysis step.
+  - **Data Profiling**
+    - As a data practitioner, I can profile the dataset so I can understand the dataset variables and asses if any transformation is needed or there are any missing data.
+  - **Correlation Analysis**
+    - As a data practitioner, I can apply different correlation methods so I can understand the relationship between the variables and the target.
+  - **Important Feature Distributions**
+    - As a data practitioner, I can evaluate the distribution of the most relevant variables along the target to get better feeling about those features.
+  - **Variables Parallel Plot**
+    - As a data practitioner, I can visualize the parallel plot of all the important features against the target variable so I can have a better feeling about their relationships with the target variable.
+
+**Epic LDP-3 Data Cleaning and Feature Engineering**\
+*Description:* This Epic is concerned with cleaning and feature engineer the dataset based on the Data analysis epic outcome.
+
+  - **Data Cleaning**
+    - As a data practitioner, I can clean the dataset so I can further preprocess the data for feature engineering step.
+  - **Feature Engineering**
+    - As a data practitioner, I can feature engineer the dataset so I can prepare the data to the split the dataset into train and test datasets.
+  - **Data Split**
+    - As a Data Practitioner, I can split the data into a train and test datasets so I can prepare the datasets for for the next steps.
+    
+**Epic LDP-4 Loan Default Prediction**\
+*Description:* This Epic is concerned with developing the best ML model that is able to predict a default event.
+
+  - **Data Split**
+    - As a Data Practitioner, I can split the data into a train and test datasets so i can prepare the datasets for the Data Cleaning and Feature Engineering Pipeline.
+  - **Data Cleaning and Feature Engineering**
+    - As a Data Practitionar, I want to create a Data Cleaning and Feature Engineering so that I can prepare the data for the ML Pipeline. 
+  - **Best Algorithm and Hyperparameter Configuration**
+    - As a Data Practitioner, I can search for the best ML algorithm and its Hyperparameter so I can create an ML pipeline.
+  - **ML Model Performance**
+    - As a ML Engineer, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
+  - **Delete Opportunity Entry**
+    - As a Site User, I can delete the opportunity so that I can remove it from the database.
+  - **Best Features**
+    - As a data practitioner, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
+
+**Epic LDP-5 Cluster Analysis**\
+*Description:* This Epic is concerned with developing a Cluster pipeline to extract hidden profiles withing the data.
+
+  - **Data Loading**
+    - As a data practitioner, I can load the dataset into the Cluster Analysis notebook so I can prepare the dataset for the analysis.
+  - **Define Cluster Pipeline with all features**
+    - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
+  - **Apply Cluster Pipeline on all features**
+    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
+  - **Dataset Split with all features dataset**
+    - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
+  - **Number of Clusters with all features**
+    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters..
+  - **Cluster Performance with all features**
+    - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
+  - **Important Features**
+    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+  - **Cluster Profile with all features** 
+    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+  - **Define Cluster Pipeline with best features** 
+    - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
+  - **Apply Cluster Pipeline with best features** 
+    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
+  - **Number of Clusters with best features** 
+    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters.
+  - **Dataset Split with best features dataset** 
+    - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
+  - **Cluster Performance with best features** 
+    - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
+  - **Cluster Profile with best features** 
+    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+  - **Push output to the repo** 
+    - As a data practitioner, I can save all the output files from the cluster analysis with best features in the repo so I can use them from the dashboard.
+
+**Epic LDP-4 Dashboard Development and Deployment**\
+*Description:* This Epic is concerned with developing and deploying a dashboard aiming to present the outcome of the project in a user friendly manner.
+
+  - **Project Summary**
+    - As a credit analyst, I can view a page that contains the project summary so that I can understand what the project is about, what the business requirements are and how to navigate the tool dashboards.
+  - **Data Analysis**
+    - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized. 
+  - **Project Hypotheses**
+    - As a credit analyst, I can view a page that contains the project hypotheses and how the data practitioner approached the validations and whether each hypothesis is validated or not.
+  - **Predictor Model Evaluation Page**
+    - As a credit analyst, I can view Predictor Model Evaluation report so I can understand the predictor model performance.
+  - **Debtor Default Profile**
+    - As a credit analyst I can view a page that contains Debtor Default Profiles so I can understand typical patterns of Debtor Default Profile.
+  - **Live Default Predictor**
+    - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
 
 # Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
