@@ -29,12 +29,21 @@ The four hypotheses are listed here with their respective validation discussions
 3. However high a person's income, it does not impact loan approval if the loan-to-income ratio is below a defined threshold. This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2.
 4. If a debtor rents their home and has no record of default, the likelihood of no defaulting on loan is guaranteed. The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan.
 
-# The rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+# Business requirements to the Data Visualizations and ML tasks Mapping
 
+In this section, the business requirements are mapped to the data visualization and ML tasks based on the following rational:
+
+1. **Business Requirement 1**: Correlation study and data visualization
+   - We will inspect the data related loan default debtor
+   - We will conduct a correlation study using Pearson and Spearman method along with Predictive Power Score. This is to understand how variables are correlated to loan_status, the target variable. 
+   - We will plot the most relevant variables from the correlation study against the loan_status.
+   - We will plot the parallel plot against the loan_status to interactively visualize the relationship between the correlated variables and the loan_status
+2. **Business Requirement 2**: Data Analysis and Classification Model
+   - We want to predict if a debt applicant will default or not. Hence, we want to build a binary classifier.
+3. **Business Requirement 3**: Data Analysis and Cluster Model
+   - We want to cluster similar debtor to predict to which cluster a new debt applicant belongs to. We want to predict what is the probability of that specific debt applicant to default or not based on the cluster the applicant belongs to.
 
 # ML Business Case
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
 # Agile Development
 
