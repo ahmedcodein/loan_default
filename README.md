@@ -173,7 +173,8 @@ The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page
   - Result: Showing the prediction result with description of the results meaning.
 
 # Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+There are no bugs encountered during the development or during the deployment phase.
 
 # Deployment
 
