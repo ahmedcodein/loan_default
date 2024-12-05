@@ -45,6 +45,29 @@ In this section, the business requirements are mapped to the data visualization 
 
 # ML Business Case
 
+## 1. Classification Model
+
+We want to predict if a debt applicant will default or not. Hence, we want to build a binary classifier. The target variable used for the prediction is loan_default. Whereas
+default = 0 and no default = 1.
+Hence, the following logic is considered:
+- we consider a classification model for the job. It is based on supervised learning with two classes and single label.
+- The model goal is: 
+  - predict loan default applicant with a precision of at least 85%.
+- The model will be considered a failure if the default precision is less than 85%.
+- The Dataset used to train and test the model is imported from Kaggle. Please refer to the Dataset section for further information 
+
+## 1. Cluster Model
+
+We want to cluster similar debtor to predict to which cluster a new debt applicant belongs to. We want to predict what is the probability of that specific debt applicant to default or not based on the cluster the applicant belongs to.
+Hence, the following logic is considered:
+- The model success metrics:
+  - Silhouette score is at least 2
+  - The number of clusters should not be higher than 6 clusters
+- we consider a KMeans clustering model (unsupervised learning) for the job.
+- We consider standard clustering pipeline with principle component analysis.
+- We consider both all the features in the dataset as well as the important features to assess which pipeline shall serve the gaol best.
+- The Dataset used to train and test the model is imported from Kaggle. Please refer to the Dataset section for further information 
+
 # Agile Development
 
 Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories.
