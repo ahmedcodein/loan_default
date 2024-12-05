@@ -11,7 +11,7 @@ The live link to the project is provided in [Loan Default Predictor](https://loa
 
 # Dataset
 
-The dataset is imported from [kaggle](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data). The dataset contains 14 attributes. Each attribute describes a specific trait of a pervious debtor. In the dataset, these attributes are represented by columns. While each row, describes one a debtor, who either defaulted or not.
+The dataset is imported from [kaggle](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data). The dataset contains 14 attributes. Each attribute describes a specific trait of a pervious debtor. In the dataset, these attributes are represented by columns. While each row, describes a debtor, who either defaulted or not.
 
 The dataset consists of 14 attributes (variables). From these, 9 and Numeric and 5 are Text (Categorical - Object). The dataset contains 45000 records. A summary of the dataset is provided in the table below:
 
@@ -30,7 +30,7 @@ The dataset consists of 14 attributes (variables). From these, 9 and Numeric and
 | cb_person_cred_hist_length     | Length of credit history in years                          | Float       |
 | credit_score                   | Credit score of the person                                 | Integer     |
 | previous_loan_defaults_on_file | Indicator of previous loan defaults                        | Categorical |
-| loan_status (target variable)  | Loan approval status: **Default = 0**, **No Default == 1** | Integer     |
+| loan_status (target variable)  | Loan approval status: **Default = 0**, **No Default = 1** | Integer     |
 
 
 # Business Requirements
@@ -53,7 +53,7 @@ The four hypotheses are listed here with their respective validation discussions
 3. However high a person's income, it does not impact loan approval if the loan-to-income ratio is below a defined threshold. This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2.
 4. If a debtor rents their home and has no record of default, the likelihood of no defaulting on loan is guaranteed. The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan.
 
-# Business requirements to the Data Visualizations and ML tasks Mapping
+# Business Mapping
 
 In this section, the business requirements are mapped to the data visualization and ML tasks based on the following rational:
 
