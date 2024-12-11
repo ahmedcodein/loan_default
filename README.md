@@ -178,7 +178,7 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
   - **Push output to the repo** 
     - As a data practitioner, I can save all the output files from the cluster analysis with best features in the repo so I can use them from the dashboard.
 
-**Epic LDP-4 Dashboard Development and Deployment**\
+**Epic LDP-6 Dashboard Development and Deployment**\
 *Description:* This Epic is concerned with developing and deploying a dashboard aiming to present the outcome of the project in a user friendly manner.
 
   - **Project Summary**
@@ -187,11 +187,11 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
     - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized. 
   - **Project Hypotheses**
     - As a credit analyst, I can view a page that contains the project hypotheses and how the data practitioner approached the validations and whether each hypothesis is validated or not.
-  - **Predictor Model Evaluation Page**
+  - **ML: Predict Default**
     - As a credit analyst, I can view Predictor Model Evaluation report so I can understand the predictor model performance.
-  - **Debtor Default Profile**
+  - **ML: Cluster Analysis**
     - As a credit analyst I can view a page that contains Debtor Default Profiles so I can understand typical patterns of Debtor Default Profile.
-  - **Live Default Predictor**
+  - **Default Predictor**
     - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
 
 # Dashboard Design
@@ -228,6 +228,179 @@ The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page
   - Predictor Interface: Listing the important features as inputs for the user with a button of running the prediction.
   - Result: Showing the prediction result with description of the results meaning.
 
+# Manual Tests
+
+This subsection provides a comprehensive account of the manual tests conducted for this project. The tests follows the epics structure. The test and their respective acceptance criteria along with test results are presented below:
+
+**Epic LDP-1 Data Collection**\
+*Description:* This Epic is concerned with collecting, downloading and saving the dataset.
+
+  - **User Story: Dataset Download**
+    - As a data practitioner, I can collect the dataset from Kaggel to the workspace so I can download the dataset and unzip it.
+      - Acceptance Criterion:
+        - Given the dataset is located in the Kaggel website, the data practitioner can download the dataset and then unzip the dataset -- **Pass**
+  - **User Story: Data Saving**
+    - As a data practitioner, I can save the collected dataset from Kaggel in a directory in the workspace so I can use the data for the analysis stage.
+      - Acceptance Criterion:
+        - Given the dataset is unzipped, the data practitioner can save the dataset on the workspace -- **Pass**
+  
+**Epic LDP-2 Data Analysis**\
+*Description:* This Epic is concerned with analyzing the dataset.
+
+  - **User Story: Data Loading**
+    - As a data practitioner, I can load the dataset from workspace so I can begin the data analysis step.
+      - Acceptance Criterion:
+        - Given the dataset is saved in the workspace, the data practitioner can load the dataset into the data analysis notebook -- **Pass**
+  - **User Story: Data Profiling**
+    - As a data practitioner, I can profile the dataset so I can understand the dataset variables and asses if any transformation is needed or there are any missing data.
+      - Acceptance Criterion:
+        - Given the dataset is loaded into the data analysis notebook, the data practitioner can profile every dataset variable to asses if nay transformation is needed or there are any missing data -- **Pass**
+  - **User Story: Correlation Analysis**
+    - As a data practitioner, I can apply different correlation methods so I can understand the relationship between the variables and the target.
+      - Acceptance Criterion:
+        - Given the dataset is loaded into the data analysis notebook, the data practitioner can perform correlation study to understand the relationship between the variables and the target variable -- **Pass**
+  - **User Story: Important Feature Distributions**
+    - As a data practitioner, I can evaluate the distribution of the most relevant variables along the target to get better feeling about those features.
+      - Acceptance Criterion:
+        - Given that the most correlated features are extracted from the correlation study, the data practitioner can perform distribution analysis of each correlated feature against the target variable  -- **Pass**
+  - **User Story: Variables Parallel Plot**
+    - As a data practitioner, I can visualize the parallel plot of all the important features against the target variable so I can have a better feeling about their relationships with the target variable.
+      - Acceptance Criterion:
+        - Given that the most correlated features are extracted from the correlation study, the data practitioner implement the parallel plot on the features against the target variable -- **Pass**
+
+**Epic LDP-3 Data Cleaning and Feature Engineering**\
+*Description:* This Epic is concerned with cleaning and feature engineer the dataset based on the Data analysis epic outcome.
+
+  - **User Story: Data Cleaning**
+    - As a data practitioner, I can clean the dataset so I can further preprocess the data for feature engineering step.
+      - Acceptance Criterion:
+        - Given the dataset loaded into the data cleaning and features engineering notebook, the data practitioner can asses the data for any cleaning processing task and clean the dataset accordingly -- **Pass**
+
+  - **User Story: Feature Engineering**
+    - As a data practitioner, I can feature engineer the dataset so I can prepare the data to the split the dataset into train and test datasets.
+      - Acceptance Criterion:
+        - Given that the dataset is cleaned via data cleaning process step, the data practitioner can perform the feature engineering process on the dataset -- **Pass**
+  - **User Story: Data Split**
+    - As a Data Practitioner, I can split the data into a train and test datasets so I can prepare the datasets for for the next steps.
+      - Acceptance Criterion:
+        - Given that the dataset is cleaned and feature engineered via the data cleaning and feature engineering steps, the data practitioner can split the dataset into train and test datasets -- **Pass**
+    
+**Epic LDP-4 Loan Default Prediction**\
+*Description:* This Epic is concerned with developing the best ML model that is able to predict a default event.
+
+  - **User Story: Data Split**
+    - As a Data Practitioner, I can split the data into a train and test datasets so i can prepare the datasets for the Data Cleaning and Feature Engineering Pipeline.
+      - Acceptance Criterion:
+        - Given that the dataset is loaded into the predict default notebook, the data practitioner can split the dataset into train and test datasets -- **Pass**
+  - **User Story: Data Cleaning and Feature Engineering**
+    - As a Data Practitioner, I want to create a Data Cleaning and Feature Engineering so that I can prepare the data for the ML Pipeline.
+      - Acceptance Criterion:
+        - Given that the the data cleaning and feature engineering steps are clarified from the data cleaning and feature engineering notebook, the data practitioner can create a data cleaning and feature engineering pipeline -- **Pass** 
+  - **User Story: Best Algorithm and Hyperparameter Configuration**
+    - As a Data Practitioner, I can search for the best ML algorithm and its Hyperparameter so I can create an ML pipeline.
+      - Acceptance Criterion:
+        - Given that the dataset is cleaned and feature engineered via the respective pipeline, the ML Engineer can feed the dataset into various ML algorithms to create an ML Pipeline -- **Pass**
+  - **User Story: ML Model Performance**
+    - As a ML Engineer, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
+      - Acceptance Criterion:
+        - Given that the best ML model is identified, the ML engineer can evaluate the performance of the selected model -- **Pass**
+  - **User Story: Best Features**
+    - As an ML Engineer, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
+      - Acceptance Criterion:
+        - Given that the best ML model is identified, the ML engineer can identify the best features on the identified model and build new ML pipeline based on the best features instead of all the features -- **Pass**
+
+**Epic LDP-5 Cluster Analysis**\
+*Description:* This Epic is concerned with developing a Cluster pipeline to extract hidden profiles withing the data.
+
+  - **User Story: Data Loading**
+    - As a data practitioner, I can load the dataset into the Cluster Analysis notebook so I can prepare the dataset for the analysis.
+      - Acceptance Criterion:
+        - Given the dataset is saved in the workspace, the data practitioner can load the dataset into the cluster analysis notebook -- **Pass**
+  - **User Story: Define Cluster Pipeline with all features**
+    - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
+      - Acceptance Criterion:
+        - Given the dataset is loaded into the notebook, the data practitioner can define a cluster pipeline with all features -- **Pass**
+  - **User Story: Dataset Split with all features dataset**
+    - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
+      - Acceptance Criterion:
+        - Given the dataset is loaded into the notebook, the data practitioner can split the dataset into train and test sets -- **Pass**
+  - **User Story: Apply Cluster Pipeline on all features**
+    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
+      - Acceptance Criterion:
+        - Given cluster pipeline is defined and the dataset with all features is split into train and test, the data practitioner can apply a cluster pipeline on train set -- **Pass**
+  - **User Story: Number of Clusters with all features**
+    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters.
+      - Acceptance Criterion:
+        - Given cluster pipeline is defined and the dataset with all features is split into train and test, the data practitioner can apply Elbow method and Silhouette score to extract the optimum number of clusters -- **Pass**
+  - **User Story: Cluster Performance with all features**
+    - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
+      - Acceptance Criterion:
+        - Given cluster pipeline is applied, the data practitioner can perform performance analysis on the defined cluster pipeline -- **Pass**
+  - **User Story: Cluster Profile with all features** 
+    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+      - Acceptance Criterion:
+        - Given cluster pipeline is applied, the data practitioner can extract and analyze patterns from the cluster profiles -- **Pass**
+  - **User Story: Important Features**
+    - As a data practitioner, I can extract the best features so I can build a dataset of best features to be used for the Cluster Profile patterns analysis.
+      - Acceptance Criterion:
+        - Given cluster pipeline is applied, the data practitioner can extract the best features -- **Pass**
+  - **User Story: Define Cluster Pipeline with best features** 
+    - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
+      - Acceptance Criterion:
+        - Given best features are identified, the data practitioner can define a cluster pipeline on the best features -- **Pass**
+  - **User Story: Apply Cluster Pipeline with best features** 
+    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
+      - Acceptance Criterion:
+        - Given the cluster pipeline with best features are defined, the data practitioner can apply the cluster pipeline on the best features -- **Pass**
+  - **User Story: Number of Clusters with best features** 
+    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters.
+      - Acceptance Criterion:
+        - Given cluster pipeline is defined with best features, the data practitioner can apply Elbow method and Silhouette score to extract the optimum number of clusters -- **Pass**
+  - **User Story: Dataset Split with best features dataset** 
+    - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
+      - Acceptance Criterion:
+        - Given best features identified, the data practitioner can split the dataset with the selected features only into train and test sets -- **Pass**
+  - **User Story: Cluster Performance with best features** 
+    - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
+      - Acceptance Criterion:
+        - Given cluster pipeline is applied on the best features, the data practitioner can perform performance analysis on the defined cluster pipeline -- **Pass**
+  - **User Story: Cluster Profile with best features** 
+    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+      - Acceptance Criterion:
+        - Given cluster pipeline is applied on the best features, the data practitioner can extract and analyze patterns from the cluster profiles -- **Pass**
+  - **User Story: Push output to the repo** 
+    - As a data practitioner, I can save all the output files from the cluster analysis with best features in the repo so I can use them from the dashboard.
+      - Acceptance Criterion:
+        - Given cluster pipeline performance is accepted, the data practitioner can save the relevant outputs needed for the streamlit dashboard -- **Pass**
+
+**Epic LDP-6 Dashboard Development and Deployment**\
+*Description:* This Epic is concerned with developing and deploying a dashboard aiming to present the outcome of the project in a user friendly manner.
+
+  - **User Story: Project Summary**
+    - As a credit analyst, I can view a page that contains the project summary so that I can understand what the project is about, what the business requirements are and how to navigate the tool dashboards.
+      - Acceptance Criterion:
+        - Given credit analyst clicked on the app website link, the credit analyst can land on the project summary page and finds on this page the project introduction and the business requirements of the project -- **Pass**
+  - **User Story: Data Analysis**
+    - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized.
+      - Acceptance Criterion:
+        - Given credit analyst is on any page of the project, the credit analyst can click on the Data Analysis page to inspect the datasets, gets a summary on the correlation study with all its relevant graphs -- **Pass**
+  - **User Story: Project Hypotheses**
+    - As a credit analyst, I can view a page that contains the project hypotheses and how the data practitioner approached the validations and whether each hypothesis is validated or not.
+      - Acceptance Criterion:
+        - Given that the credit analyst is on any page of the project, the credit analyst can click on the Hypotheses page in order to read the project hypotheses and how those hypotheses are validated -- **Pass**
+  - **User Story: ML: Predict Default**
+    - As a credit analyst, I can view Predictor Model Evaluation report so I can understand the predictor model performance.
+      - Acceptance Criterion:
+        - Given that the credit analyst is on any page of the project, the credit analyst can click on the ML: Predict Default page in order to read all the pipeline steps and view the ML pipeline performance -- **Pass**
+  - **User Story: ML: Cluster Analysis**
+    - As a credit analyst I can view a page that contains Debtor Default Profiles so I can understand typical patterns of Debtor Default Profile.
+      - Acceptance Criterion:
+        - Given that the credit analyst is on any page of the project, the credit analyst can click on the ML: Cluster Analysis page in order to read all the pipeline steps, Silhouette Plot, Cluster distributions, graph of important features and a table on cluster distribution with description -- **Pass**
+  - **User Story: Default Predictor**
+    - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
+      - Acceptance Criterion:
+        - Given that the credit analyst is on any page of the project, the credit analyst can click on theDefault Predictor page and can enter the live data into the prediction model and get the prediction report -- **Pass**
+
 # Unfixed Bugs
 
 There are no bugs encountered during the development or during the deployment phase.
@@ -236,7 +409,7 @@ There are no bugs encountered during the development or during the deployment ph
 
 This section is devoted to explain the procedures conducted by the author to deploy and clone Loan Default Predictor code. Additionally, for those who are interested to create a fork from the main branch, a dedicated procedure is also provided.
 
-## 1 Heroku
+## 1. Heroku
 
 The following procedure is implemented to deploy Loan Default Predictor on Heroku platform:
 
