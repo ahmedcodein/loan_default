@@ -9,8 +9,8 @@ def summary_body():
     st.write("")
     st.info(
         f"**Loan Default Predictor** **(LDP)** aims to assess institutional\n"
-        f"lenders (creditors) represented by a credit analyst to evaluate the\n"
-        f"debt applicant default risk.\n"
+        f"lenders (creditors) represented by a credit analyst to\n"
+        f"evaluate the debt applicant default risk.\n"
         f"**LDP** achieves this by exploiting historical Data and machine\n"
         f"learning algorithms to predict potential default cases.\n"
         f"As such, the institutional lender will be able to ensure **85%**\n"

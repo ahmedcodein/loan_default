@@ -12,10 +12,10 @@ def hypothesis_body():
         f"Upon embarking on this project, **four hypotheses are considered**\n"
         f". The first and the fourth hypotheses are validated,\n"
         f"while the second and the third hypotheses proved to be invalid\n"
-        f"The author suspects that the second and the third hypotheses are not\n"
-        f"validated due to some missing variables in the original dataset\n"
-        f"that are essential for training the model, for example, the length\n"
-        f"of the loan, other incomes or other outstanding loans.\n"
+        f"The author suspects that the second and the third hypotheses are\n"
+        f"not validated due to some missing variables in the original\n"
+        f"dataset that are essential for training the model, for example,\n"
+        f"the length of the loan, other incomes or other outstanding loans.\n"
     )
 
     st.write("#### 2. Hypotheses")
@@ -42,7 +42,7 @@ def hypothesis_body():
         f"4. **If a debtor rents their home and has no record of default,\n"
         f"the likelihood of no defaulting on loan is guaranteed.**\n"
         f"The parallel plot analysis in notebook 02 reveals that the initial\n"
-        f"hypothesis is **not entirely accurate**. While renters tend to have\n"
-        f"a lower default rate compared to debtors with other home\n"
+        f"hypothesis is **not entirely accurate**. While renters tend\n"
+        f"to have a lower default rate compared to debtors with other home\n"
         f"ownership types, it does not guarantee a risk-free loan."
     )

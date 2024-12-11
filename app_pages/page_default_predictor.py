@@ -11,10 +11,14 @@ def default_predictor_body():
     # load predict default files
     version = 'v1'
     churn_pipe_dc_fe = load_pkl_file(
-        f'outputs/ml_pipeline/predict_default/{version}/clf_pipeline_feat_eng.pkl')
+        f"outputs/ml_pipeline/predict_default/"
+        f"{version}/clf_pipeline_feat_eng.pkl"
+    )
     churn_pipe_model = load_pkl_file(
-        f"outputs/ml_pipeline/predict_default/{version}/clf_pipeline_model.pkl")
-    default_features = (pd.read_csv(f"outputs/ml_pipeline/predict_default/{version}/X_train.csv")
+        f"outputs/ml_pipeline/predict_default/{version}/clf_pipeline_model.pkl"
+    )
+    default_features = (pd.read_csv(f"outputs/ml_pipeline/predict_default/"
+                                    f"{version}/X_train.csv")
                         .columns
                         .to_list()
                         )
@@ -23,7 +27,8 @@ def default_predictor_body():
     version = 'v1'
     cluster_pipe = load_pkl_file(
         f"outputs/ml_pipeline/cluster_analysis/{version}/cluster_pipeline.pkl")
-    cluster_features = (pd.read_csv(f"outputs/ml_pipeline/cluster_analysis/{version}/TrainSet.csv")
+    cluster_features = (pd.read_csv(f"outputs/ml_pipeline/cluster_analysis/"
+                                    f"{version}/TrainSet.csv")
                         .columns
                         .to_list()
                         )
@@ -65,7 +70,8 @@ def check_variables_for_UI(default_features, cluster_features):
         )
     )
     st.write(
-        f"* There are {len(combined_features)} features for the UI: \n\n {combined_features}")
+        f"* There are {len(combined_features)} features for the UI: \n\n"
+        f" {combined_features}")
 
 
 def DrawInputsWidgets():

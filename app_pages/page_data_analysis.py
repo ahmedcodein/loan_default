@@ -59,15 +59,17 @@ def data_analysis_body():
     st.info(
         f"**From the correlation study, the following conclusions are**\n"
         f"**extracted:**\n\n"
-        f"* 1. Pervious loan default has positive and moderate correlation to loan approval.\n"
+        f"* 1. Pervious loan default has positive and moderate correlation\n"
+        f"to loan approval.\n"
         f"* 2. Interest Rate has positive and weak correlation to loan\n"
         f"approval.\n"
-        f"* 3. Loan-to-income ratio has positive and weak correlation to loan\n"
-        f"approval.\n"
+        f"* 3. Loan-to-income ratio has positive and weak correlation\n"
+        f"to loan approval.\n"
         f"* 4. Home ownership has weak correlation to loan approval.\n"
         f"This correlation exercises two duality depending on home ownership\n"
         f"status (i.e. rent, own and mortgage).\n"
-        f"* 5. Income has negative and very weak correlation to loan approval.\n"
+        f"* 5. Income has negative and very weak correlation to loan\n"
+        f"approval.\n"
     )
 
     # Code copied from "02 - Data Analysis" notebook

@@ -12,15 +12,21 @@ def ml_cluster_body():
     cluster_pipe = load_pkl_file(
         f"outputs/ml_pipeline/cluster_analysis/{version}/cluster_pipeline.pkl")
     cluster_silhouette = plt.imread(
-        f"outputs/ml_pipeline/cluster_analysis/{version}/clusters_silhouette.png")
+        f"outputs/ml_pipeline/cluster_analysis/{version}/clusters_silhouette.png"
+    )
     features_to_cluster = plt.imread(
-        f"outputs/ml_pipeline/cluster_analysis/{version}/features_define_cluster.png")
+        f"outputs/ml_pipeline/cluster_analysis/{version}/"
+        "features_define_cluster.png"
+    )
     cluster_profile = pd.read_csv(
-        f"outputs/ml_pipeline/cluster_analysis/{version}/clusters_profile.csv")
-    cluster_features = (pd.read_csv(f"outputs/ml_pipeline/cluster_analysis/{version}/TrainSet.csv")
-                        .columns
-                        .to_list()
-                        )
+        f"outputs/ml_pipeline/cluster_analysis/{version}/"
+        "clusters_profile.csv")
+    cluster_features = (
+        pd.read_csv(
+            f"outputs/ml_pipeline/cluster_analysis/{version}/TrainSet.csv")
+        .columns
+        .to_list()
+    )
 
     # dataframe for cluster_distribution_per_variable()
     df_loan_status_vs_clusters = loan_default_data().filter(
