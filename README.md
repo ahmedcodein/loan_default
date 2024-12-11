@@ -400,6 +400,9 @@ This subsection provides a comprehensive account of the manual tests conducted f
     - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
       - Acceptance Criterion:
         - Given that the credit analyst is on any page of the project, the credit analyst can click on theDefault Predictor page and can enter the live data into the prediction model and get the prediction report -- **Pass**
+# Python Code Validation
+
+All python codes in the app_pages, src and the app.py are validated with CI Python Linter. The code are clean without errors or warnings.
 
 # Unfixed Bugs
 
