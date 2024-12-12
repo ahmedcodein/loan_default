@@ -526,6 +526,7 @@ In this section a list the libraries used to develop the project with a descript
 * [Google Gemini](https://gemini.google.com/) is used to understand various ML concepts.
 * Code Intitute PP5 student project [Airplane Performance Predictor
 ](https://github.com/GustafEnebog/data-driven-design)
+* [Leonardo](https://app.leonardo.ai/) is used to create the introduction image of the README file.
 
 # Acknowledgements
 
