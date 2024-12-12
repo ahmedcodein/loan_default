@@ -13,23 +13,23 @@ The live link to the project is provided in [Loan Default Predictor](https://loa
 
 The dataset is imported from [kaggle](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data). The dataset contains 14 attributes. Each attribute describes a specific trait of a pervious debtor. In the dataset, these attributes are represented by columns. While each row, describes a debtor, who either defaulted or not.
 
-The dataset consists of 14 attributes (variables). From these, 9 and Numeric and 5 are Text (Categorical - Object). The dataset contains 45000 records. A summary of the dataset is provided in the table below:
+The dataset consists of 14 attributes (variables). From these, 9 are numeric and 5 are text (categorical - object). The dataset contains 45000 records. A summary of the dataset is provided in the table below:
 
-| Variable                       | Description                                                | Data Type   |
-| ------------------------------ | ---------------------------------------------------------- | ----------- |
-| person_age                     | Age of the person                                          | Float       |
-| person_gender                  | Gender of the person                                       | Categorical |
-| person_education               | Highest education level                                    | Categorical |
-| person_income                  | Annual income                                              | Float       |
-| person_emp_exp                 | Years of employment experience                             | Integer     |
-| person_home_ownership          | Home ownership status (e.g., rent, own, mortgage)          | Categorical |
-| loan_amnt                      | Loan amount requested                                      | Float       |
-| loan_intent                    | Purpose of the loan                                        | Categorical |
-| loan_int_rate                  | Loan interest rate                                         | Float       |
-| loan_percent_income            | Loan amount as a percentage of annual income               | Float       |
-| cb_person_cred_hist_length     | Length of credit history in years                          | Float       |
-| credit_score                   | Credit score of the person                                 | Integer     |
-| previous_loan_defaults_on_file | Indicator of previous loan defaults                        | Categorical |
+| Variable                       | Description                                               | Data Type   |
+| ------------------------------ | --------------------------------------------------------- | ----------- |
+| person_age                     | Age of the person                                         | Float       |
+| person_gender                  | Gender of the person                                      | Categorical |
+| person_education               | Highest education level                                   | Categorical |
+| person_income                  | Annual income                                             | Float       |
+| person_emp_exp                 | Years of employment experience                            | Integer     |
+| person_home_ownership          | Home ownership status (e.g., rent, own, mortgage)         | Categorical |
+| loan_amnt                      | Loan amount requested                                     | Float       |
+| loan_intent                    | Purpose of the loan                                       | Categorical |
+| loan_int_rate                  | Loan interest rate                                        | Float       |
+| loan_percent_income            | Loan amount as a percentage of annual income              | Float       |
+| cb_person_cred_hist_length     | Length of credit history in years                         | Float       |
+| credit_score                   | Credit score of the person                                | Integer     |
+| previous_loan_defaults_on_file | Indicator of previous loan defaults                       | Categorical |
 | loan_status (target variable)  | Loan approval status: **Default = 0**, **No Default = 1** | Integer     |
 
 
@@ -44,28 +44,29 @@ The project has three business requirements:
 
 # Project Hypotheses
 
-Upon embarking on this project, four hypotheses are considered . The first and the fourth hypotheses are validated, while the second and the third hypotheses proved to be invalid The author suspects that the second and the third hypotheses are not validated due to some missing variables in the original dataset that are essential for training the model, for example, the length of the loan, other incomes or other outstanding loans.
+Upon embarking on this project, four hypotheses are considered. The first and the fourth hypotheses are validated, while the second and the third hypotheses proved to be invalid. The author suspects that the second and the third hypotheses are not validated because the original kaggel dataset did not include them. Those variables are essential in holding some critical information, if available could potentially change the model and subsequently the validity of the aforementioned hypotheses. For example, from the author perspective, those variable might be the length of the loan, other source of incomes (passive income) or other outstanding loans.
 
 The four hypotheses are listed here with their respective validation discussions:
 
-1. Default on previous loan(s) makes it unlikely to acquire new loan. The hypothesis is validated in both the parallel plot and in cluster analysis conducted in notebook 02 and 05-b respectively.
-2. The higher the loan-to-income ratio, the higher the probability of rejecting the loan. In notebook 05-b, Cluster Analysis, cluster profiles reveal that the opposite is true. That is the higher loan-to-income ratio the lower the risk of default. From the author perspective, this is attributed to the lack of data variables in the dataset that could explain this counterintuitive result, such as Loan Length.
-3. However high a person's income, it does not impact loan approval if the loan-to-income ratio is below a defined threshold. This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2.
-4. If a debtor rents their home and has no record of default, the likelihood of no defaulting on loan is guaranteed. The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan.
+1. **Default on previous loan(s) makes it unlikely to acquire new loan**. *The hypothesis is validated in both the parallel plot and in the cluster analysis conducted in notebook 02 and 05-b respectively*.
+2. **The higher the loan-to-income ratio, the higher the probability of rejecting the loan**. *In notebook 05-b, Cluster Analysis, cluster profiles reveal that the opposite is true. That is the higher the loan-to-income ratio the lower the risk of default. From the author perspective, this is attributed to the absence of critical variables in the original dataset that could explain this counterintuitive result, such as Loan Length,other source of incomes (passive income) or other outstanding loans*.
+3. **However high a person's income, it does not impact loan approval if the loan-to-income ratio is below a defined threshold**. *This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2*.
+4. **If a debtor rents their home and has no record of default, the likelihood of no defaulting on loan is guaranteed**. *The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate but holds some truth in it. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan*.
 
 # Business Mapping
 
 In this section, the business requirements are mapped to the data visualization and ML tasks based on the following rational:
 
 1. **Business Requirement 1**: Correlation study and data visualization
-   - We will inspect the data related loan default debtor
-   - We will conduct a correlation study using Pearson and Spearman method along with Predictive Power Score. This is to understand how variables are correlated to loan_status, the target variable. 
+   - We will inspect the data related to the loan default debtor
+   - We will conduct a correlation study using Pearson and Spearman method along with Predictive Power Score. This is to understand how variables are correlated to loan_status which is the target variable. 
    - We will plot the most relevant variables from the correlation study against the loan_status.
-   - We will plot the parallel plot against the loan_status to interactively visualize the relationship between the correlated variables and the loan_status
+   - We will plot the parallel plot against the loan_status to interactively visualize the relationship between the correlated variables and the loan_status.
 2. **Business Requirement 2**: Data Analysis and Classification Model
    - We want to predict if a debt applicant will default or not. Hence, we want to build a binary classifier.
 3. **Business Requirement 3**: Data Analysis and Cluster Model
-   - We want to cluster similar debtor to predict to which cluster a new debt applicant belongs to. We want to predict what is the probability of that specific debt applicant to default or not based on the cluster the applicant belongs to.
+   - We want to cluster similar debtors to predict to which cluster a new debt applicant belongs to. 
+   - We want to predict what is the probability of that specific debt applicant to default or not based on the cluster the applicant belongs to.
 
 # ML Business Case
 
@@ -78,7 +79,7 @@ Hence, the following logic is considered:
 - The model goal is: 
   - predict loan default applicant with a precision of at least 85%.
 - The model will be considered a failure if the default precision is less than 85%.
-- The Dataset used to train and test the model is imported from Kaggle. Please refer to the Dataset section for further information 
+- The Dataset used to train and test the model is imported from Kaggle. Please refer to the [Dataset section](#dataset) for further information. 
 
 ## 1. Cluster Model
 
@@ -89,109 +90,109 @@ Hence, the following logic is considered:
   - The number of clusters should not be higher than 6 clusters
 - we consider a KMeans clustering model (unsupervised learning) for the job.
 - We consider standard clustering pipeline with principle component analysis.
-- We consider both all the features in the dataset as well as the important features to assess which pipeline shall serve the gaol best.
-- The Dataset used to train and test the model is imported from Kaggle. Please refer to the Dataset section for further information 
+- We consider both all the features in the dataset as well as the important features to assess which pipeline shall serve the goal best.
+- The Dataset used to train and test the model is imported from Kaggle. Please refer to the [Dataset section](#dataset) for further information. 
 
-# Agile Development
+# Epics and User Stories
 
-Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories.
+Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories. The Epics and the user stories along with how development conducted over each sprint can be accessed on [Jira-Loan Default Prediction Project](https://almudhafar4codeinstitute.atlassian.net/jira/software/projects/LDP/boards/6/timeline)
 
 **Epic LDP-1 Data Collection**\
 *Description:* This Epic is concerned with collecting, downloading and saving the dataset.
 
-  - **Dataset Download**
+  - **User Story: Dataset Download**
     - As a data practitioner, I can collect the dataset from Kaggel to the workspace so I can download the dataset and unzip it.
-  - **Data Saving**
+  - **User Story: Data Saving**
     - As a data practitioner, I can save the collected dataset from Kaggel in a directory in the workspace so I can use the data for the analysis stage.
   
 **Epic LDP-2 Data Analysis**\
 *Description:* This Epic is concerned with analyzing the dataset.
 
-  - **Data Loading**
+  - **User Story: Data Loading**
     - As a data practitioner, I can load the dataset from workspace so I can begin the data analysis step.
-  - **Data Profiling**
+  - **User Story: Data Profiling**
     - As a data practitioner, I can profile the dataset so I can understand the dataset variables and asses if any transformation is needed or there are any missing data.
-  - **Correlation Analysis**
+  - **User Story: Correlation Analysis**
     - As a data practitioner, I can apply different correlation methods so I can understand the relationship between the variables and the target.
-  - **Important Feature Distributions**
+  - **User Story: Important Feature Distributions**
     - As a data practitioner, I can evaluate the distribution of the most relevant variables along the target to get better feeling about those features.
-  - **Variables Parallel Plot**
+  - **User Story: Variables Parallel Plot**
     - As a data practitioner, I can visualize the parallel plot of all the important features against the target variable so I can have a better feeling about their relationships with the target variable.
 
 **Epic LDP-3 Data Cleaning and Feature Engineering**\
 *Description:* This Epic is concerned with cleaning and feature engineer the dataset based on the Data analysis epic outcome.
 
-  - **Data Cleaning**
+  - **User Story: Data Cleaning**
     - As a data practitioner, I can clean the dataset so I can further preprocess the data for feature engineering step.
-  - **Feature Engineering**
+  - **User Story: Feature Engineering**
     - As a data practitioner, I can feature engineer the dataset so I can prepare the data to the split the dataset into train and test datasets.
-  - **Data Split**
+  - **User Story: Data Split**
     - As a Data Practitioner, I can split the data into a train and test datasets so I can prepare the datasets for for the next steps.
     
 **Epic LDP-4 Loan Default Prediction**\
 *Description:* This Epic is concerned with developing the best ML model that is able to predict a default event.
 
-  - **Data Split**
+  - **User Story: Data Split**
     - As a Data Practitioner, I can split the data into a train and test datasets so i can prepare the datasets for the Data Cleaning and Feature Engineering Pipeline.
-  - **Data Cleaning and Feature Engineering**
+  - **User Story: Data Cleaning and Feature Engineering**
     - As a Data Practitionar, I want to create a Data Cleaning and Feature Engineering so that I can prepare the data for the ML Pipeline. 
-  - **Best Algorithm and Hyperparameter Configuration**
+  - **User Story: Best Algorithm and Hyperparameter Configuration**
     - As a Data Practitioner, I can search for the best ML algorithm and its Hyperparameter so I can create an ML pipeline.
-  - **ML Model Performance**
+  - **User Story: ML Model Performance**
     - As a ML Engineer, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
-  - **Delete Opportunity Entry**
+  - **User Story: Delete Opportunity Entry**
     - As a Site User, I can delete the opportunity so that I can remove it from the database.
-  - **Best Features**
+  - **User Story: Best Features**
     - As a data practitioner, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
 
 **Epic LDP-5 Cluster Analysis**\
 *Description:* This Epic is concerned with developing a Cluster pipeline to extract hidden profiles withing the data.
 
-  - **Data Loading**
+  - **User Story: Data Loading**
     - As a data practitioner, I can load the dataset into the Cluster Analysis notebook so I can prepare the dataset for the analysis.
-  - **Define Cluster Pipeline with all features**
+  - **User Story: Define Cluster Pipeline with all features**
     - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
-  - **Apply Cluster Pipeline on all features**
+  - **User Story: Apply Cluster Pipeline on all features**
     - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
-  - **Dataset Split with all features dataset**
+  - **User Story: Dataset Split with all features dataset**
     - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
-  - **Number of Clusters with all features**
+  - **User Story: Number of Clusters with all features**
     - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters..
-  - **Cluster Performance with all features**
+  - **User Story: Cluster Performance with all features**
     - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
-  - **Important Features**
+  - **User Story: Important Features**
     - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
-  - **Cluster Profile with all features** 
+  - **User Story: Cluster Profile with all features** 
     - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
-  - **Define Cluster Pipeline with best features** 
+  - **User Story: Define Cluster Pipeline with best features** 
     - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
-  - **Apply Cluster Pipeline with best features** 
+  - **User Story: Apply Cluster Pipeline with best features** 
     - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
-  - **Number of Clusters with best features** 
+  - **User Story: Number of Clusters with best features** 
     - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters.
-  - **Dataset Split with best features dataset** 
+  - **User Story: Dataset Split with best features dataset** 
     - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
-  - **Cluster Performance with best features** 
+  - **User Story: Cluster Performance with best features** 
     - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
-  - **Cluster Profile with best features** 
+  - **User Story: Cluster Profile with best features** 
     - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
-  - **Push output to the repo** 
+  - **User Story: Push output to the repo** 
     - As a data practitioner, I can save all the output files from the cluster analysis with best features in the repo so I can use them from the dashboard.
 
 **Epic LDP-6 Dashboard Development and Deployment**\
 *Description:* This Epic is concerned with developing and deploying a dashboard aiming to present the outcome of the project in a user friendly manner.
 
-  - **Project Summary**
+  - **User Story: Project Summary**
     - As a credit analyst, I can view a page that contains the project summary so that I can understand what the project is about, what the business requirements are and how to navigate the tool dashboards.
-  - **Data Analysis**
+  - **User Story: Data Analysis**
     - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized. 
-  - **Project Hypotheses**
+  - **User Story: Project Hypotheses**
     - As a credit analyst, I can view a page that contains the project hypotheses and how the data practitioner approached the validations and whether each hypothesis is validated or not.
-  - **ML: Predict Default**
+  - **User Story: ML: Predict Default**
     - As a credit analyst, I can view Predictor Model Evaluation report so I can understand the predictor model performance.
-  - **ML: Cluster Analysis**
+  - **User Story: ML: Cluster Analysis**
     - As a credit analyst I can view a page that contains Debtor Default Profiles so I can understand typical patterns of Debtor Default Profile.
-  - **Default Predictor**
+  - **User Story: Default Predictor**
     - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
 
 # Dashboard Design
@@ -210,20 +211,20 @@ The following aspects are to be viewed in the Hypotheses page:
   - Discussion: a brief discussion on the main findings following the hypotheses validation.
   - Hypotheses: listing the hypotheses with an explanation how each of the hypotheses is evaluated
 ## 4. ML: Predict Default
-The following aspects are to be viewed in the ML Predict Default Pipeline page:
+The following aspects are to be viewed in the ML Predict Default page:
   - Introduction: a brief discussion on the main goal of the ML pipeline.
   - Pipelines: Definitions of the developed pipelines with the ability to display them.
   - Features: Displaying the features the pipelines are trained on.
   - Pipeline Performance: Displaying two reports on the ML pipeline performance on the train and test datasets respectively.
 ## 5. ML: Cluster Analysis
-The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page:
+The following aspects are to be viewed in the ML: Cluster Analysis page:
   - Introduction: a brief discussion on pipeline main result.
   - Pipeline: Definitions of the developed pipeline with the ability to display the pipeline steps.
   - Features: Displaying the features the pipelines are trained on.
   - Plots: Displaying Silhouette, cluster distribution over the target variable, relative percentage of target variable to each cluster and a plot to display best features to define a cluster
   - Cluster Profile Summary: displaying a description of each cluster profile with a discussion on each cluster. Additionally, displaying a table that shows cluster profiles.
 ## 6. Default Predictor
-The following aspects are to be viewed in the ML: Cluster Analysis Pipeline page:
+The following aspects are to be viewed in the ML: Cluster Analysis page:
   - Introduction: description the main goal of the predictor.
   - Predictor Interface: Listing the important features as inputs for the user with a button of running the prediction.
   - Result: Showing the prediction result with description of the results meaning.
@@ -402,7 +403,7 @@ This subsection provides a comprehensive account of the manual tests conducted f
         - Given that the credit analyst is on any page of the project, the credit analyst can click on theDefault Predictor page and can enter the live data into the prediction model and get the prediction report -- **Pass**
 # Python Code Validation
 
-All python codes in the app_pages, src and the app.py are validated with CI Python Linter. The code are clean without errors or warnings.
+All python codes in the app_pages, src and the app.py folders are validated with CI Python Linter. The code are clean free of errors or warnings.
 
 # Unfixed Bugs
 
