@@ -278,7 +278,6 @@ This subsection provides a comprehensive account of the manual tests conducted f
     - As a data practitioner, I can clean the dataset so I can further preprocess the data for feature engineering step.
       - Acceptance Criterion:
         - Given the dataset loaded into the data cleaning and features engineering notebook, the data practitioner can asses the data for any cleaning processing task and clean the dataset accordingly -- **Pass**
-
   - **User Story: Feature Engineering**
     - As a data practitioner, I can feature engineer the dataset so I can prepare the data to the split the dataset into train and test datasets.
       - Acceptance Criterion:
