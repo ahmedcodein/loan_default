@@ -9,6 +9,8 @@ Two main economic benefits can be achieved by following loan issuance decisions 
 
 The live link to the project is provided in [Loan Default Predictor](https://loan-default-ml-predictor-a4d2d7adf5ae.herokuapp.com/)
 
+![Central Bank](images/introduction.jpg)
+
 # Dataset
 
 The dataset is imported from [kaggle](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data/data). The dataset contains 14 attributes. Each attribute describes a specific trait of a pervious debtor. In the dataset, these attributes are represented by columns. While each row, describes a debtor, who either defaulted or not.
@@ -401,6 +403,7 @@ This subsection provides a comprehensive account of the manual tests conducted f
     - As a credit analyst I can enter a set of features into the ML model so that I can see the probability of the debtor applicant being defaulted and to which cluster the debtor applicant belongs to.
       - Acceptance Criterion:
         - Given that the credit analyst is on any page of the project, the credit analyst can click on theDefault Predictor page and can enter the live data into the prediction model and get the prediction report -- **Pass**
+
 # Python Code Validation
 
 All python codes in the app_pages, src and the app.py folders are validated with CI Python Linter. The code are clean free of errors or warnings.
@@ -492,7 +495,7 @@ In this section a list of the technologies used to develop this project is provi
 | Heroku           | Development Platform                                                                                               |
 | CI Python Linter | Code Institute Python code style convention checker                                                                |
 
-# Main Data Analysis and Machine Learning Libraries
+# Main Python Modules and Libraries
 
 In this section a list the libraries used to develop the project with a description as to what purpose each package is used for.
 
