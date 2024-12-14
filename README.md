@@ -50,18 +50,18 @@ Upon embarking on this project, four hypotheses are considered. The first and th
 
 The four hypotheses are listed here with their respective validation discussions:
 
-1. **Default on previous loan(s) makes it unlikely to guarantee a free risk loan (free of default)**. 
-   **How to Validate**:There are two possibility for validating the hypothesis. First by conducting a parallel plot wheres the author would be able to see how default on pervious loan affects the loan_status outcome. Second by conducting a cluster analysis and evaluate if some clusters with pervious defaults clearly lead to defaults.
-   **Evaluation Result**: *The hypothesis is validated in both the parallel plot and in the cluster analysis conducted in notebook 02 and 05-b respectively*.
+1. **Default on previous loan(s) makes it unlikely to guarantee a free risk loan (free of default)**.   
+   - **How to Validate**:There are two possibility for validating the hypothesis. First by conducting a parallel plot wheres the author would be able to see how default on pervious loan affects the loan_status outcome. Second by conducting a cluster analysis and evaluate if some clusters with pervious defaults clearly lead to defaults.
+   - **Evaluation Result**: *The hypothesis is validated in both the parallel plot and in the cluster analysis conducted in notebook 02 and 05-b respectively*.
 2. **The higher the loan-to-income ratio, the higher the probability of loan default**.
-   **How to Validate**: The suggested approach is by conducting a cluster analysis and evaluate if some clusters with higher loan-to-income ratio lead to defaults.
-   **Evaluation Result**:*In notebook 05-b, Cluster Analysis, cluster profiles reveal that the opposite is true. That is the higher the loan-to-income ratio the lower the risk of default. From the author perspective, this is attributed to the absence of critical variables in the original dataset that could explain this counterintuitive result, such as Loan Length,other source of incomes (passive income) or other outstanding loans*.
+   - **How to Validate**: The suggested approach is by conducting a cluster analysis and evaluate if some clusters with higher loan-to-income ratio lead to defaults.
+   - **Evaluation Result**:*In notebook 05-b, Cluster Analysis, cluster profiles reveal that the opposite is true. That is the higher the loan-to-income ratio the lower the risk of default. From the author perspective, this is attributed to the absence of critical variables in the original dataset that could explain this counterintuitive result, such as Loan Length,other source of incomes (passive income) or other outstanding loans*.
 3. **However high a person's income, it does not impact no default if the loan-to-income ratio is below a defined threshold**.
-   **How to Validate**: The suggested approach is by conducting a cluster analysis and evaluate if some clusters with change in expected loan_status would be impacted by the ratio of loan-to-income ratio.
-   **Evaluation Result**: *This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2*.
+   - **How to Validate**: The suggested approach is by conducting a cluster analysis and evaluate if some clusters with change in expected loan_status would be impacted by the ratio of loan-to-income ratio.
+   - **Evaluation Result**: *This hypothesis appears to be invalid, for the same reason in the presented in hypothesis 2*.
 4. **If a debtor rents their home and has no record of default, the likelihood of no default is guaranteed**.
-   **How to Validate**: The suggested approach is by conducting a parallel plot wheres the author would be able to see if the two conditions met, ie home ownership is equivalent to rent and has no record of default will guarantee default free risk.
-   **Evaluation Result**: *The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate but holds some truth in it. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan*.
+   - **How to Validate**: The suggested approach is by conducting a parallel plot wheres the author would be able to see if the two conditions met, ie home ownership is equivalent to rent and has no record of default will guarantee default free risk.
+   - **Evaluation Result**: *The parallel plot analysis in notebook 02 reveals that the initial hypothesis is not entirely accurate but holds some truth in it. While renters tend to have a lower default rate compared to debtors with other home ownership types, it does not guarantee a risk-free loan*.
 
 # Business Mapping
 
