@@ -145,15 +145,13 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
   - **User Story: Data Split**
     - As a Data Practitioner, I can split the data into a train and test datasets so i can prepare the datasets for the Data Cleaning and Feature Engineering Pipeline.
   - **User Story: Data Cleaning and Feature Engineering**
-    - As a Data Practitionar, I want to create a Data Cleaning and Feature Engineering so that I can prepare the data for the ML Pipeline. 
+    - As a Data Practitioner, I want to create a Data Cleaning and Feature Engineering so that I can prepare the data for the ML Pipeline.
   - **User Story: Best Algorithm and Hyperparameter Configuration**
     - As a Data Practitioner, I can search for the best ML algorithm and its Hyperparameter so I can create an ML pipeline.
   - **User Story: ML Model Performance**
-    - As a ML Engineer, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
-  - **User Story: Delete Opportunity Entry**
-    - As a Site User, I can delete the opportunity so that I can remove it from the database.
+    - As a data practitioner, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
   - **User Story: Best Features**
-    - As a data practitioner, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
+    - As an data practitioner, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
 
 **Epic LDP-5 Cluster Analysis**\
 *Description:* This Epic is concerned with developing a Cluster pipeline to extract hidden profiles withing the data.
@@ -162,18 +160,18 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
     - As a data practitioner, I can load the dataset into the Cluster Analysis notebook so I can prepare the dataset for the analysis.
   - **User Story: Define Cluster Pipeline with all features**
     - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
-  - **User Story: Apply Cluster Pipeline on all features**
-    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
   - **User Story: Dataset Split with all features dataset**
     - As a data practitioner, I can split the dataset into Train and Test Sets and apply the cluster pipeline I can evaluate the cluster pipeline performance.
+  - **User Story: Apply Cluster Pipeline on all features**
+    - As a data practitioner, I can apply cluster pipeline to the full features dataset so I can evaluate the cluster pipeline performance.
   - **User Story: Number of Clusters with all features**
-    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters..
+    - As a data practitioner, I can use Elbow method and Silhouette score to extract the optimum number of clusters.
   - **User Story: Cluster Performance with all features**
     - As a data practitioner, I can evaluate the performance of the cluster pipeline prediction to evaluate if the cluster is able to predict with good confidence.
-  - **User Story: Important Features**
-    - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
   - **User Story: Cluster Profile with all features** 
     - As a data practitioner, I can read the cluster profiles so I can extract and analyze cluster profiles patterns.
+  - **User Story: Important Features**
+    - As a data practitioner, I can extract the best features so I can build a dataset of best features to be used for the Cluster Profile patterns analysis.
   - **User Story: Define Cluster Pipeline with best features** 
     - As a data practitioner, I can define a cluster pipeline so I can apply it to the full features dataset.
   - **User Story: Apply Cluster Pipeline with best features** 
@@ -195,7 +193,7 @@ Agile methodology is used to develop Loan Default Predictor. The high-level requ
   - **User Story: Project Summary**
     - As a credit analyst, I can view a page that contains the project summary so that I can understand what the project is about, what the business requirements are and how to navigate the tool dashboards.
   - **User Story: Data Analysis**
-    - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized. 
+    - As a credit practitioner, I can view a page that contains the statistical analysis conducted on the datasets by the data practitioner so I can see how the data are analyzed and visualized.
   - **User Story: Project Hypotheses**
     - As a credit analyst, I can view a page that contains the project hypotheses and how the data practitioner approached the validations and whether each hypothesis is validated or not.
   - **User Story: ML: Predict Default**
@@ -309,15 +307,15 @@ This subsection provides a comprehensive account of the manual tests conducted f
   - **User Story: Best Algorithm and Hyperparameter Configuration**
     - As a Data Practitioner, I can search for the best ML algorithm and its Hyperparameter so I can create an ML pipeline.
       - Acceptance Criterion:
-        - Given that the dataset is cleaned and feature engineered via the respective pipeline, the ML Engineer can feed the dataset into various ML algorithms to create an ML Pipeline -- **Pass**
+        - Given that the dataset is cleaned and feature engineered via the respective pipeline, the data practitioner can feed the dataset into various ML algorithms to create an ML Pipeline -- **Pass**
   - **User Story: ML Model Performance**
-    - As a ML Engineer, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
+    - As a data practitioner, I can evaluate the ML model performance so I can suffice the business requirement of predicting a default on loan.
       - Acceptance Criterion:
-        - Given that the best ML model is identified, the ML engineer can evaluate the performance of the selected model -- **Pass**
+        - Given that the best ML model is identified, the data practitioner can evaluate the performance of the selected model -- **Pass**
   - **User Story: Best Features**
-    - As an ML Engineer, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
+    - As an data practitioner, I can identify the best features so I can build an new ML pipeline with the same configuration to compare its performance with the ML pipeline with the full features.
       - Acceptance Criterion:
-        - Given that the best ML model is identified, the ML engineer can identify the best features on the identified model and build new ML pipeline based on the best features instead of all the features -- **Pass**
+        - Given that the best ML model is identified, the data practitioner can identify the best features on the identified model and build new ML pipeline based on the best features instead of all the features -- **Pass**
 
 **Epic LDP-5 Cluster Analysis**\
 *Description:* This Epic is concerned with developing a Cluster pipeline to extract hidden profiles withing the data.
