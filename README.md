@@ -105,7 +105,7 @@ Hence, the following logic is considered:
 
 # Epics and User Stories
 
-Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories. The Epics and the user stories along with how development conducted over each sprint can be accessed on [Jira-Loan Default Prediction Project](https://almudhafar4codeinstitute.atlassian.net/jira/software/projects/LDP/boards/6/timeline)
+Agile methodology is used to develop Loan Default Predictor. The high-level requirements presented in the previous section are followed to define the six Epics of the project. Those Epics are then broke down into 36 User Stories. The project is developed over two sprints, each sprint span one week.The Epics and the user stories along with how development conducted over each sprint can be accessed on [Jira-Loan Default Prediction Project](https://almudhafar4codeinstitute.atlassian.net/jira/software/projects/LDP/boards/6/timeline)
 
 **Epic LDP-1 Data Collection**\
 *Description:* This Epic is concerned with collecting, downloading and saving the dataset.
